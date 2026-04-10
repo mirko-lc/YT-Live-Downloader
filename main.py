@@ -6,7 +6,8 @@ import importlib.util
 from datetime import datetime
 
 # ================= CONFIGURACIÓN DE USUARIO =================
-URL_OBJETIVO = "https://youtube.com/live/ueEtbA2vVqA"
+# Cambiar el  link al objetivo deseado
+URL_OBJETIVO = "https://youtube.com/live/ejemplo"
 HORA_INICIO = "11:59"
 DIRECTORIO = "./grabaciones"  # Personalizar ruta.
 FECHA_HOY = datetime.now().strftime("%d-%m")

@@ -19,8 +19,8 @@ Al definir una hora específica, el script esperará en segundo plano hasta que 
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/TU_USUARIO/stream-sentinel.git](https://github.com/TU_USUARIO/stream-sentinel.git)
-    cd stream-sentinel
+    git clone [https://github.com/mirko-lc/YT-Live-Downloader.git](https://github.com/mirko-lc/YT-Live-Downloader.git)
+    cd YT-Live-Downloader
     ```
 
 2.  **Configuración:**
@@ -28,7 +28,7 @@ Al definir una hora específica, el script esperará en segundo plano hasta que 
     ```python
     # ================= CONFIGURACIÓN =================
     URL_OBJETIVO = "URL_DEL_DIRECTO"
-    HORA_INICIO = "HH:MM" # Formato 24h
+    HORA_INICIO = "HH:MM"
     DIRECTORIO = "C:/Ruta/A/Tu/Carpeta/"
     # =================================================
     ```
@@ -44,15 +44,14 @@ Al definir una hora específica, el script esperará en segundo plano hasta que 
 * [Python 3.x](https://www.python.org/)
 * Conexión a internet estable.
 
-## Nota personal
-
-Este proyecto fue desarrollado como parte de mis prácticas iniciales en Python, aplicando conceptos de:
-* Automatización de procesos.
-* Gestión de subprocesos (`subprocess`).
-* Manejo de sistemas de archivos y fechas.
-
-Es mi primera contribución por aquí y estaría encantado de recibir feedback.
-
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Todo el mundo es libre de usarlo, modificarlo y mejorarlo.
+
+## Nota personal
+
+Este proyecto es el resultado de mis primeros acercamientos a la programación en Python.
+Es mi primera contribución por aquí y estaría encantado de recibir feedback.
+Espero que el script sea de ayuda!
+Gracias y un abrazo! :D
+
