@@ -12,7 +12,7 @@ START = "11:59" # CHANGE THIS
 DIRECTORY = "./ytld_videos"  # CHANGE THIS IF NEEDED
 TODAY = datetime.now().strftime("%d-%m")
 FILE_NAME = os.path.join(
-    DIRECTORIO, f"video{FECHA_HOY}.mp4")  
+    DIRECTORY, f"video{TODAY}.mp4")  
 # =================================================
 
 
