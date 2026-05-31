@@ -6,13 +6,13 @@ import importlib.util
 from datetime import datetime
 
 # ================= CONFIGURACIÓN DE USUARIO =================
-# Cambiar el  link al objetivo deseado
-URL_OBJETIVO = "https://youtube.com/live/ejemplo"
-HORA_INICIO = "11:59"
-DIRECTORIO = "./grabaciones"  # Personalizar ruta.
-FECHA_HOY = datetime.now().strftime("%d-%m")
-NOMBRE_ARCHIVO = os.path.join(
-    DIRECTORIO, f"curso_ciberseguridad_{FECHA_HOY}.mp4")
+
+URL = "https://youtube.com/live/ejemplo" # CHANGE THIS
+START = "11:59" # CHANGE THIS
+DIRECTORY = "./ytld_videos"  # CHANGE THIS IF NEEDED
+TODAY = datetime.now().strftime("%d-%m")
+FILE_NAME = os.path.join(
+    DIRECTORIO, f"video{FECHA_HOY}.mp4")  
 # =================================================
 
 
@@ -29,16 +29,16 @@ dependencias()
 
 def esperar_hora():  # El script espera a la hora indicada para empezar a grabar
     print(f"--- INICIANDO LA GRABACIÓN ---")
-    print(f"Objetivo: {URL_OBJETIVO}")
-    print(f"Hora programada: {HORA_INICIO}")
-    print(f"Archivo: {NOMBRE_ARCHIVO}")
+    print(f"Objetivo: {URL}")
+    print(f"Hora programada: {START}")
+    print(f"Archivo: {FILE_NAME}")
     print(f"Directorio actual: {os.getcwd()}")
     print("-" * 45)
 
     while True:
         ahora = datetime.now().strftime("%H:%M")
 
-        if ahora >= HORA_INICIO:
+        if ahora >= START:
             print(
                 f"\n[{datetime.now().strftime('%H:%M:%S')}] ¡HORA ALCANZADA! Lanzando Streamlink...")
             lanzar_grabacion()
@@ -58,9 +58,9 @@ def lanzar_grabacion():
 
     comando = [
         sys.executable, "-m", "streamlink",
-        URL_OBJETIVO,
+        URL,
         "best",
-        "-o", NOMBRE_ARCHIVO,
+        "-o", FILE_NAME,
         "--force",
         "--retry-streams", "30",
         "--retry-max", "20"
@@ -68,7 +68,7 @@ def lanzar_grabacion():
 
     try:
 
-        print(f"Grabando en: {os.path.abspath(NOMBRE_ARCHIVO)}")
+        print(f"Grabando en: {os.path.abspath(FILE_NAME)}")
         subprocess.run(comando, check=True)
         print(
             f"\n[{datetime.now().strftime('%H:%M:%S')}] Transmisión terminada y guardada.")
